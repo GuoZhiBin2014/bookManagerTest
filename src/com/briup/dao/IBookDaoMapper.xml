@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.dao.IBookDao">
+
+	<insert id="addBook" parameterType="Book">
+		insert into
+		t_book(bookId,name,category,press,bDate,author,price,info,inventory)
+		values(#{bookId},#{name},#{category},#{press},#{bDate},#{author},#{price},#{info},#{inventory})
+	</insert>
+
+	<select id="findBookById" parameterType="long" resultType="Book">
+		select *
+		from t_book
+		where bookId=#{bookId}
+	</select>
+	
+	<select id="findAllBooks" resultType="Book">
+		select *
+		from t_book
+	</select>
+	
+	<update id="updateBook" parameterType="Book">
+		update t_book
+		set name=#{name},category=#{category},press=#{press}, 
+			bDate=#{bDate},author=#{author},price=#{price},info=#{info},inventory=#{inventory}
+		where bookId = #{bookId} 
+	</update>
+
+</mapper>

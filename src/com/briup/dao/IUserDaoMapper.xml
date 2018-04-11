@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.dao.IUserDao">
+	
+	<insert id="addUser" parameterType="User">
+		<selectKey resultType="long" keyProperty="id" order="BEFORE">
+			select user_seq.nextval from dual
+		</selectKey>
+		insert into t_user(id,nickname,password,email,question,answer,gender,age,phone) 
+		values(#{id},#{nickname},#{password},#{email},#{question},#{answer},#{gender},#{age},#{phone})
+	</insert>
+	
+	<select id="findUserByName" parameterType="string" resultType="User">
+		select *
+		from t_user
+		where nickname=#{nickname}
+	</select>
+	
+	<update id="updateUser" parameterType="User">
+		update t_user
+		set email=#{email},question=#{question},answer=#{answer},age=#{age},phone=#{phone},password=#{password}
+		where nickname=#{nickname}	
+	</update>
+	
+	<select id="selectAllAdmin" resultType="User">
+		select *
+		from t_user
+	</select>
+	
+</mapper>
