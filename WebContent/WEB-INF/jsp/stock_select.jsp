@@ -73,6 +73,7 @@
 					<th>图书书名</th>
 					<th>入库数量</th>
 					<th>入库时间</th>
+					<th>入库单价</th>
 					
 					<th>操作员姓名</th>
 					<th>相关操作</th>
@@ -88,6 +89,7 @@
 						<td>${sto.bookName }</td>
 						<td>${sto.snumber }</td>
 						<td>${sto.stime }</td>
+						<td>${sto.price }</td>
 						<td>${sto.operator }</td>
 						<td><a href="#" class="tablelink">查看图书详情</a> 
 						<a href="#" class="tablelink"> 删除</a></td>

@@ -26,7 +26,7 @@ public class StorageServiceImpl implements IStorageService {
 				throw new StorageServiceException("填写信息不全，请补充后再添加");
 			}
 			storage.setSnumber(Integer.valueOf(number));
-			Book book = bookDao.findBookById(Long.valueOf(storage.getBookId()));
+			Book book = bookDao.findBookById(Long.valueOf(storage.getBookId().trim()));
 			if(book==null){
 				throw new StorageServiceException("添加图书编号不存在");
 			}

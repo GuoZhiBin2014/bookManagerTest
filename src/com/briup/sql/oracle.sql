@@ -12,7 +12,7 @@ create table t_user(
 	answer varchar2(200) not null,
 	gender varchar2(1) not null,
 	age number not null,
-	phone varchar2(50)
+	phone varchar2(50) not null
 );
 
 create table t_book(
@@ -24,7 +24,7 @@ create table t_book(
 	author varchar2(20) not null,
 	price varchar2(10) not null,
 	info varchar2(100) not null,
-	inventory number(10) not null
+	inventory number(10) 
 );
 
 create table t_storage(
@@ -33,6 +33,7 @@ create table t_storage(
 	bookName varchar2(50) not null,
 	snumber varchar2(20) not null,
 	stime varchar2(20) not null,
+	price varchar2(20) not null,
 	operator varchar2(20) not null
 );
 
@@ -115,79 +116,79 @@ Values(9787513506939,'翻译美学理论','人文社科','外语教学与研究�
 
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000001,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000001,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000002,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000002,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000003,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000003,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000004,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000004,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000005,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000005,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000006,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000006,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000007,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000007,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000008,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000008,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000009,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000009,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000010,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000010,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000011,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000011,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000012,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000012,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000013,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000013,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000014,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000014,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000015,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000015,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000016,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000016,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000017,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000017,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000018,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000018,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000019,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000019,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000020,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000020,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000021,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000021,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000022,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000022,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000023,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000023,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000024,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000024,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 insert into t_storage
 (id,bookId,bookName,snumber,stime,price,operator) 
-values(1400000025,9787513506919,'翻译美学理论',10,2012-12-5,'Guozb');
+values(1400000025,9787513506919,'翻译美学理论',10,'2012-12-5','20.5','Guozb');
 
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)

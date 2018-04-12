@@ -75,6 +75,8 @@
 						class="dfinput" value="" style="width: 250px;" /></li>
 					<li><label>入库时间<b>*</b></label><input name="stime" type="date"
 						class="dfinput" value="${currentTime }" style="width: 250px;" /></li>
+					<li><label>入库单价<b>*</b></label><input name="price" type="text"
+						class="dfinput" value="" style="width: 250px;" /></li>
 					<li><label>操作员<b>*</b></label><input name="operator" type="text"
 						class="dfinput" value="${user.nickname }" style="width: 250px;" /></li>
 

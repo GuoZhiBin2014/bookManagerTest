@@ -8,8 +8,8 @@
 			select user_seq.nextval from dual
 		</selectKey>
 		insert into
-		t_storage(id,bookId,bookName,snumber,stime,operator)
-		values(#{id},#{bookId},#{bookName},#{snumber},#{stime},#{operator}) 
+		t_storage(id,bookId,bookName,snumber,stime,price,operator)
+		values(#{id},#{bookId},#{bookName},#{snumber},#{stime},#{price},#{operator}) 
 	</insert>
 
 	<select id="selectAll" resultType="Storage">

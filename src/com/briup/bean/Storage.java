@@ -11,6 +11,7 @@ public class Storage implements Serializable{
 	private String bookName;
 	private int snumber;
 	private String stime;
+	private String price;
 	private String operator;
 	public Storage() {
 	}
@@ -25,6 +26,25 @@ public class Storage implements Serializable{
 		this.operator = operator;
 	}
 	
+	
+	public Storage(long id, String bookId, String bookName, int snumber,
+			String stime, String price, String operator) {
+		super();
+		this.id = id;
+		this.bookId = bookId;
+		this.bookName = bookName;
+		this.snumber = snumber;
+		this.stime = stime;
+		this.price = price;
+		this.operator = operator;
+	}
+	
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
 	public long getId() {
 		return id;
 	}
