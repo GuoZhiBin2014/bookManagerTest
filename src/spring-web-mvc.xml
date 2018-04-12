@@ -54,6 +54,7 @@
 	<mvc:view-controller path="/user_update" view-name="user_update"/>
 	<mvc:view-controller path="/relogin" view-name="reLogin"/>
 	<mvc:view-controller path="/backlogin" view-name="backlogin"/>
+	<mvc:view-controller path="/book_category" view-name="book_category"/>
 	
 	
 </beans>

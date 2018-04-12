@@ -2,6 +2,9 @@
 drop table t_user;
 drop table t_book;
 drop table t_storage;
+drop table t_category;
+drop table t_customer;
+drop table t_record;
 
 create table t_user(
 	id number primary key,
@@ -36,6 +39,50 @@ create table t_storage(
 	price varchar2(20) not null,
 	operator varchar2(20) not null
 );
+
+create table t_category(
+	id number(20) primary key,
+	name varchar2(30) not null,
+	addtime varchar2(20) not null
+);
+
+create table t_customer(
+	id number(20) primary key,
+	name varchar2(50) not null,
+	gender varchar2(2) not null,
+	cardid varchar2(20) not null,
+	phoneNum varchar2(20) not null,
+	qqNum varchar2(20) not null,
+	address varchar2(50) not null,
+	remark varchar2(20) not null
+);
+
+create table t_record(
+	rid number(20) primary key,
+	bookId varchar2(20) not null,
+	bookName varchar2(20) not null,
+	category varchar2(20) not null,
+	salePrice varchar2(20) not null,
+	saleNum varchar2(20) not null,
+	profit varchar2(20) not null
+);
+
+insert into t_category(id,name,addtime)
+values(0001,'纪实文学','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0002,'人文社科','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0003,'市场/营销','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0004,'计算机/网络','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0005,'期刊/教育','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0006,'生活/运动','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0007,'儿童文学','2018-4-1');
+insert into t_category(id,name,addtime)
+values(0008,'其他','2018-4-1');
 
 INSERT INTO t_book
 (bookId,name,category,press,bDate,author,price,info,inventory) 

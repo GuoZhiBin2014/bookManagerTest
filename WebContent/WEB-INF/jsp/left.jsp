@@ -70,6 +70,7 @@ $(function(){
     <dd><div class="title"><span><img src="images/leftico01.png" /></span>图书信息管理</div>
     <ul class="menuson">
         <li><cite></cite><a href="book/select" target="rightFrame">图书信息查询</a><i></i></li>
+        <li><cite></cite><a href="book_category" target="rightFrame">图书类别管理</a><i></i></li>
         <li><cite></cite><a href="book_add" target="rightFrame">图书信息添加</a><i></i></li>
         <li><cite></cite><a href="book_update" target="rightFrame">图书信息修改</a><i></i></li>
     </ul>
