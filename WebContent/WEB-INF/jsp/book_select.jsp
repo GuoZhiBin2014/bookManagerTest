@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -105,7 +105,7 @@
 			</thead>
 
 			<tbody>
-				
+
 				<c:forEach items="${books }" var="book">
 
 					<tr style="height: 30px;">
@@ -136,20 +136,19 @@
 
 
 		<div class="pagin">
-			<div class="message">
-				共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页
+			<div class="message" style="font-size: 120%">
+				共<i class="blue">${size }</i>条记录，当前显示第&nbsp; <i class="blue">${page }&nbsp;</i>页,
+				共<i class="blue"> ${pageNum } </i>页 
 			</div>
 			<ul class="paginList">
-				<li class="paginItem"><a href="javascript:;"><span
+				<li class="paginItem"><a href="book/jump?page=0"><span
 						class="pagepre"></span></a></li>
-				<li class="paginItem"><a href="javascript:;">1</a></li>
-				<li class="paginItem current"><a href="javascript:;">2</a></li>
-				<li class="paginItem"><a href="javascript:;">3</a></li>
-				<li class="paginItem"><a href="javascript:;">4</a></li>
-				<li class="paginItem"><a href="javascript:;">5</a></li>
-				<li class="paginItem more"><a href="javascript:;">...</a></li>
-				<li class="paginItem"><a href="javascript:;">10</a></li>
-				<li class="paginItem"><a href="javascript:;"><span
+
+				<c:forEach var="n" begin="1" end="${pageNum }">
+					<li class="paginItem"><a href="book/jump?page=${n }">${n }</a></li>
+				</c:forEach>
+
+				<li class="paginItem"><a href="book/jump?page=00"><span
 						class="pagenxt"></span></a></li>
 			</ul>
 		</div>

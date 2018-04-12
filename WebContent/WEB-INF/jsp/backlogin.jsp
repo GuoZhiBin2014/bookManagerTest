@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <h2>${msg }</h2>
     <p>请返回首页重新登陆,继续访问该系统!</p>
-    <div class="reindex"><a href="main" target="_parent">返回首页</a></div>
+    <div class="reindex"><a href="main" target="_parent">返回重新登陆</a></div>
     
     </div>
 </body>
