@@ -14,11 +14,14 @@ import com.briup.bean.Book;
 import com.briup.common.exception.BookServiceException;
 import com.briup.common.exception.DataAccessException;
 import com.briup.dao.IBookDao;
+import com.briup.dao.ICategoryDao;
 
 @Service("bookService")
 public class BookServiceImpl implements IBookService {
 	@Autowired
 	IBookDao bookDao;
+	@Autowired
+	ICategoryDao categoryDao;
 
 	@Override
 	public void addBooks(Book book) throws BookServiceException {

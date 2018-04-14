@@ -43,7 +43,7 @@ create table t_storage(
 create table t_category(
 	id number(20) primary key,
 	name varchar2(30) not null,
-	addtime varchar2(20) not null
+	addtime varchar2(50) not null
 );
 
 create table t_customer(
@@ -68,21 +68,21 @@ create table t_record(
 );
 
 insert into t_category(id,name,addtime)
-values(0001,'纪实文学','2018-4-1');
+values(0001,'纪实文学','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0002,'人文社科','2018-4-1');
+values(0002,'人文社科','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0003,'市场/营销','2018-4-1');
+values(0003,'市场/营销','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0004,'计算机/网络','2018-4-1');
+values(0004,'计算机/网络','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0005,'期刊/教育','2018-4-1');
+values(0005,'期刊/教育','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0006,'生活/运动','2018-4-1');
+values(0006,'生活/运动','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0007,'儿童文学','2018-4-1');
+values(0007,'儿童文学','2018-4-1 20:00:00');
 insert into t_category(id,name,addtime)
-values(0008,'其他','2018-4-1');
+values(0008,'其他','2018-4-1 20:00:00');
 
 INSERT INTO t_book
 (bookId,name,category,press,bDate,author,price,info,inventory) 

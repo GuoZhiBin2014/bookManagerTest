@@ -12,10 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.briup.bean.Book;
+import com.briup.bean.Category;
 import com.briup.bean.Storage;
 import com.briup.common.exception.BookServiceException;
+import com.briup.common.exception.DataAccessException;
 import com.briup.common.exception.StorageServiceException;
 import com.briup.common.util.PageUtils;
+import com.briup.dao.ICategoryDao;
 import com.briup.service.IBookService;
 
 @Controller
@@ -23,6 +26,9 @@ import com.briup.service.IBookService;
 public class BookController {
 	@Autowired
 	private IBookService bookservice;
+	@Autowired
+	private ICategoryDao categoryService;
+	
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String add(Book book, RedirectAttributes redirectAttributes) {
@@ -56,6 +62,7 @@ public class BookController {
 			}
 			session.setAttribute("books", all);
 			session.setAttribute("size", books.size());
+			
 		} catch (BookServiceException e) {
 			e.printStackTrace();
 		}
@@ -140,6 +147,18 @@ public class BookController {
 		}
 
 		return "redirect:/book_select";
+	}
+	
+	@RequestMapping("bookAdd")
+	public String bookAdd(HttpSession session){
+		try {
+			List<Category> selectAll = categoryService.selectAll();
+			session.setAttribute("categorys", selectAll);
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+		}
+		
+		return "redirect:/book_add";
 	}
 
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -73,15 +75,9 @@ $(document).ready(function(e) {
 
     <div class="vocation">
     <select class="select1" name="category">
-    <option>纪实文学</option>
-    <option>人文社科</option>
-    <option>市场/营销</option>
-    <option>计算机/网络</option>
-    <option>期刊/教育</option>
-    <option>生活/运动</option>
-    <option>动漫/幽默</option>
-    <option>儿童文学</option>
-    <option>其他</option>
+    <c:forEach items="${categorys }" var="category">
+	    <option>${category.name }</option>	
+    </c:forEach>
     </select>
     </div>
     
@@ -278,6 +274,7 @@ $(document).ready(function(e) {
     
     
     </div> -->
+   
 
 </body>
 </html>

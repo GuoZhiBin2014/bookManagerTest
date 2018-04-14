@@ -52,24 +52,36 @@
 
 	<div class="rightinfo">
 
-		<div style="margin-top: 20px;margin-left: 30px;">
-			<ul class="seachform">
+		<div style="margin-top: 20px; margin-left: 30px;">
+			<form action="category/insert">
+				<ul class="seachform">
 
-				<li><label>图书类别编号</label><input name="" type="text"
-					class="scinput" /></li>
+					<li><label>图书类别编号</label><input name="id" type="text" value=""
+						class="scinput" /></li>
 
 
-				<li><label>图书类别名称</label><input name="" type="text"
-					class="scinput" /></li>
+					<li><label>图书类别名称</label><input name="name" type="text" value=""
+						class="scinput" /></li>
 
-				<li><label>&nbsp;</label><input name="" type="button"
-					class="scbtn" value="添加类别" /></li>
-				<li><span
-					style="color: green; font-size: 16px; margin-left: 80px; margin-top: 5px;">${book_add }</span></li>
-			</ul>
+					<li><label>&nbsp;</label><input type="submit" class="scbtn" style="width: 100px;"
+						value="添加图书类别" /> 
+
+
+					</li>
+					
+					<li>
+					<span
+						style="color: red; margin-left: 40px; float: left; font-size: 16px; margin-top: 5px;">${error }</span>
+						<span
+						style="color: green; margin-left: 40px; float: left; font-size: 16px; margin-top: 5px;">${msg }</span>
+					</li>
+					
+
+				</ul>
+				</from>
 		</div>
 
-		
+
 
 
 		<table class="imgtable" style="margin-top: 5px;">
@@ -85,12 +97,12 @@
 
 			<tbody>
 
-				<c:forEach items="${books }" var="book">
+				<c:forEach items="${categorys }" var="category">
 
 					<tr style="height: 30px;">
-						<td class="imgtd"><span>${book.bookId }</span></td>
-						<td><a href="#">${book.name }</p></td>
-						<td>${book.category }</td>
+						<td class="imgtd"><span>${category.id }</span></td>
+						<td>${category.name }</td>
+						<td>${category.addtime }</td>
 						<td><a>修改</a><a>删除</a></td>
 					</tr>
 
@@ -111,70 +123,18 @@
 
 		<div class="pagin">
 			<div class="message" style="font-size: 120%">
-				共<i class="blue">${size }</i>条记录，当前显示第&nbsp; <i class="blue">${page }&nbsp;</i>页,
-				共<i class="blue"> ${pageNum } </i>页 
+				以上信息共<i class="blue">${size }</i>条记录
 			</div>
-			<ul class="paginList">
-				<li class="paginItem"><a href="book/jump?page=0"><span
-						class="pagepre"></span></a></li>
-
-				<c:forEach var="n" begin="1" end="${pageNum }">
-					<li class="paginItem"><a href="book/jump?page=${n }">${n }</a></li>
-				</c:forEach>
-
-				<li class="paginItem"><a href="book/jump?page=00"><span
-						class="pagenxt"></span></a></li>
-			</ul>
+			
 		</div>
 
 
-		<div class="tip">
-			<div class="tiptop">
-				<span>提示信息</span><a></a>
-			</div>
-
-			<div class="tipinfo">
-				<span><img src="images/ticon.png" /></span>
-				<div class="tipright">
-					<p>是否确认对信息的修改 ？</p>
-					<cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-				</div>
-			</div>
-
-			<div class="tipbtn">
-				<input name="" type="button" class="sure" value="确定" />&nbsp; <input
-					name="" type="button" class="cancel" value="取消" />
-			</div>
-
-		</div>
-
-
-
-
-	</div>
-
-	<div class="tip">
-		<div class="tiptop">
-			<span>提示信息</span><a></a>
-		</div>
-
-		<div class="tipinfo">
-			<span><img src="images/ticon.png" /></span>
-			<div class="tipright">
-				<p>是否确认对信息的修改 ？</p>
-				<cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-			</div>
-		</div>
-
-		<div class="tipbtn">
-			<input name="" type="button" class="sure" value="确定" />&nbsp; <input
-				name="" type="button" class="cancel" value="取消" />
-		</div>
-
+		
 	</div>
 
 	<script type="text/javascript">
 		$('.imgtable tbody tr:odd').addClass('odd');
 	</script>
+
 </body>
 </html>

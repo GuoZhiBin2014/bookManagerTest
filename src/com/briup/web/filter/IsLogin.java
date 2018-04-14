@@ -23,7 +23,7 @@ import com.briup.bean.User;
 @WebFilter(urlPatterns = { "/main", "/book_select", "/book_add",
 		"/book_update", "/stock_select", "/stock_in", "/stock_back",
 		"/sale_in", "/sale_select", "/sale_back", "/sale_statistics",
-		"/user_info", "/user_custom", "/user_update","/user_admin" })
+		"/user_info", "/user_custom", "/user_update","/user_admin","/book_category" })
 public class IsLogin implements Filter {
 
 	/**

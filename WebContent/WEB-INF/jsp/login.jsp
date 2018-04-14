@@ -56,9 +56,9 @@
 			
 			<form action="user/login" method="post">
 			<ul>
-				<li><input name="nickName" type="text" class="loginuser" value="Admin"
+				<li><input name="nickName" type="text" class="loginuser" value="guozhibin"
 					onclick="JavaScript:this.value=''" /></li>
-				<li><input name="password" type="password" class="loginpwd" value="密码"
+				<li><input name="password" type="password" class="loginpwd" value="123456"
 					onclick="JavaScript:this.value=''" /></li>
 
 				<li><input type="submit" class="loginbtn" value="登录" 
