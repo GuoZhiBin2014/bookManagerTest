@@ -23,39 +23,22 @@ import com.briup.bean.User;
 @WebFilter(urlPatterns = { "/main", "/book_select", "/book_add",
 		"/book_update", "/stock_select", "/stock_in", "/stock_back",
 		"/sale_in", "/sale_select", "/sale_back", "/sale_statistics",
-		"/user_info", "/user_custom", "/user_update","/user_admin","/book_category" })
+		"/user_info", "/user_custom", "/user_update", "/user_admin",
+		"/book_category" })
 public class IsLogin implements Filter {
 
-	/**
-	 * Default constructor.
-	 */
 	public IsLogin() {
-		System.out.println("isLogin");
 	}
 
-	/**
-	 * @see Filter#destroy()
-	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
-		System.out.println("doFilter");
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		String path = httpRequest.getServletPath();
-		System.out.println(path);
 		HttpSession session = httpRequest.getSession();
-		// if(path.equals("/main")){
-		// httpRequest.getRequestDispatcher("/login").forward(httpRequest,
-		// httpResponse);
-		// return;
-		// }
 		User user = (User) session.getAttribute("user");
 		if (session.getAttribute("user") == null) {
 			if (path.equals("/main")) {
@@ -71,11 +54,7 @@ public class IsLogin implements Filter {
 
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 }

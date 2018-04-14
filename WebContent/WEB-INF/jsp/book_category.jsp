@@ -103,7 +103,7 @@
 						<td class="imgtd"><span>${category.id }</span></td>
 						<td>${category.name }</td>
 						<td>${category.addtime }</td>
-						<td><a>修改</a><a>删除</a></td>
+						<td><a href="category/delete?id=${category.id }">删除</a></td>
 					</tr>
 
 				</c:forEach>
