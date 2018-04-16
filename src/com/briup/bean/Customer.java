@@ -1,17 +1,30 @@
 package com.briup.bean;
 
+/**
+ * 客户信息
+ */
 public class Customer {
+	// id
 	private Long id;
+	// 姓名
 	private String name;
+	// 性别
 	private String gender;
+	// 身份证号
 	private String cardid;
+	// 联系电话
 	private String phoneNum;
+	// QQ号
 	private String qqNum;
+	// 联系地址
 	private String address;
-	private String remark;
+
+	/**
+	 * constructor
+	 */
 	public Customer() {
 	}
-	
+
 	public Customer(Long id, String name, String gender, String cardid,
 			String phoneNum, String qqNum, String address) {
 		super();
@@ -24,19 +37,9 @@ public class Customer {
 		this.address = address;
 	}
 
-	public Customer(Long id, String name, String gender, String cardid,
-			String phoneNum, String qqNum, String address, String remark) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.cardid = cardid;
-		this.phoneNum = phoneNum;
-		this.qqNum = qqNum;
-		this.address = address;
-		this.remark = remark;
-	}
-
+	/**
+	 * Getters/Setters
+	 */
 	public Long getId() {
 		return id;
 	}
@@ -93,23 +96,14 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-
+	/**
+	 * toString
+	 */
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", gender=" + gender
 				+ ", cardid=" + cardid + ", phoneNum=" + phoneNum + ", qqNum="
-				+ qqNum + ", address=" + address + ", remark=" + remark + "]";
+				+ qqNum + ", address=" + address + "]";
 	}
-	
-	
-	
-	
-	
+
 }

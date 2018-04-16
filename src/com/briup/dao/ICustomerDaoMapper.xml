@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.dao.ICustomerDao">
+
+	<insert id="addCustomer" parameterType="Customer">
+		<selectKey resultType="long" keyProperty="id" order="BEFORE">
+			select customer_seq.nextval from dual
+		</selectKey>
+		insert into
+		t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+		values(#{id},#{name},#{gender},#{cardid},#{phoneNum},#{qqNum},#{address})
+	</insert>
+	
+	<select id="findByCardid" parameterType="String" resultType="Customer">
+		select *
+		from t_customer
+		where cardid=#{cardid}
+	</select>
+	
+	<select id="selectAll" resultType="Customer">
+		select *
+		from t_customer
+	</select>
+	
+	<delete id="deleteById" parameterType="Long">
+		delete from t_customer
+		where id=#{id}
+	</delete>
+
+</mapper>

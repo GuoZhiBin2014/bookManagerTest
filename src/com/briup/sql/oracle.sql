@@ -53,8 +53,7 @@ create table t_customer(
 	cardid varchar2(20) not null,
 	phoneNum varchar2(20) not null,
 	qqNum varchar2(20) not null,
-	address varchar2(50) not null,
-	remark varchar2(20) not null
+	address varchar2(50) not null
 );
 
 create table t_record(
@@ -66,6 +65,38 @@ create table t_record(
 	saleNum varchar2(20) not null,
 	profit varchar2(20) not null
 );
+
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000001,'guozhibin','0','140319595154645661','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000002,'guozhibin','0','140319595154645662','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000003,'guozhibin','0','140319595154645663','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000004,'guozhibin','0','140319595154645664','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000005,'guozhibin','0','140319595154645665','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000006,'guozhibin','0','140319595154645666','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000007,'guozhibin','0','140319595154645667','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000008,'guozhibin','0','140319595154645668','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000010,'guozhibin','0','140319595154645669','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000011,'guozhibin','0','140319595154645610','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000012,'guozhibin','0','140319595154645611','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000013,'guozhibin','0','140319595154645612','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000014,'guozhibin','0','140319595154645613','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000015,'guozhibin','0','140319595154645614','1523434950','851903661','上海市浦东新区');
+insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
+values(1401000016,'guozhibin','0','140319595154645615','1523434950','851903661','上海市浦东新区');
+
 
 insert into t_category(id,name,addtime)
 values(0001,'纪实文学','2018-4-1 20:00:00');
@@ -242,85 +273,87 @@ insert into t_user
 values(1406014000,'guozhibin','E10ADC3949BA59ABBE56E057F20F883E','guozhibin2014@163.com','我的名字','郭志斌',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014001,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014001,'guozhibin1','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014002,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014002,'guozhibin2','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014003,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014003,'guozhibin3','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014004,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014004,'guozhibin4','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014005,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014005,'guozhibin5','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014006,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014006,'guozhibin6','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014007,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014007,'guozhibin7','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014008,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014008,'guozhibin8','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014009,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014009,'guozhibin9','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014010,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014010,'guozhibin10','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014011,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014011,'guozhibin11','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014012,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014012,'guozhibin12','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014013,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014013,'guozhibin13','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014014,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014014,'guozhibin14','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014015,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014015,'guozhibin15','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014016,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014016,'guozhibin16','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014017,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014017,'guozhibin17','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014018,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014018,'guozhibin18','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014019,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014019,'guozhibin19','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014020,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014020,'guozhibin20','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014021,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014021,'guozhibin21','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014022,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014022,'guozhibin22','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014023,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014023,'guozhibin23','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014024,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014024,'guozhibin24','111111','111111','111','111',0,23,'15234349950');
 insert into t_user
 (id,nickname,password,email,question,answer,gender,age,phone)
-values(1406014025,'guo(只供管理员信息查询)','111111','111111','111','111',0,23,'15234349950');
+values(1406014025,'guozhibin25','111111','111111','111','111',0,23,'15234349950');
 
 
 drop sequence user_seq;
 drop sequence storage_seq;
+drop sequence customer_seq;
 
 create sequence user_seq start with 1406010001 increment by 1;
 create sequence storage_seq start with 9862000001 increment by 1;
+create sequence customer_seq start with 1101000001 increment by 1;
 
 commit;

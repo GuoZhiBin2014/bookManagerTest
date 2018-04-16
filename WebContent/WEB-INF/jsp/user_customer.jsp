@@ -48,37 +48,41 @@
 
 	<div class="rightinfo">
 
-	    <div class="itab" style="margin-top: -20px;margin-left: 10px;">
+
+		<div class="itab" style="margin-top: -20px;margin-left: 10px;">
 				<ul>
-					<li><a href="#tab1" class="selected" >管理员信息管理</a></li>
+					<li><a href="#tab1" class="selected" >客户信息管理</a></li>
 					<span style="color: red;margin-left: 400px;margin-top: 30px;font-size: 16px;">${error }</span>
 					<span style="color: green;margin-left: 400px;margin-top: 30px;font-size: 16px;">${msg }</span>
 				</ul>
 			</div>
 
-
 		<table class="tablelist" style="margin-top: 10px;">
 			<thead>
-				<tr style="width: 500px;">
-					<th style="width: 70px">管理员编号<i class="sort"> </i></th>
-					<th style="width: 100px;">姓名</th>
-					<th style="width: 150px;">电子邮箱</th>
-					<th style="width: 100px;">年龄</th>
-					<th style="width: 100px;">联系电话</th>
-					<th style="width: 100px;">相关操作</th>
+				<tr style="width: 500px;" >
+					<th style="width: 100px;text-align: center;">客户编号<i class="sort"> </i></th>
+					<th style="width: 80px;text-align: center;">姓名</th>
+					<th style="width: 80px;text-align: center;">性别</th>
+					<th style="width: 120px;text-align: center;">身份证号</th>
+					<th style="width: 100px;text-align: center;">联系电话</th>
+					<th style="width: 100px;text-align: center;">QQ号</th>
+					<th style="width: 150px;text-align: center;">联系地址</th>
+					<th style="width: 100px;text-align: center;">相关操作</th>
 				</tr>
 			</thead>
 
 			<tbody>
 
-				<c:forEach items="${admins }" var="admin">
-					<tr style="width: 500px;">
-						<td>${admin.id }</td>
-						<td>${admin.nickname }</td>
-						<td>${admin.email }</td>
-						<td>${admin.age }</td>
-						<td>${admin.phone }</td>
-						<td><a href="#" class="tablelink">查看详情</a></td>
+				<c:forEach items="${customers }" var="customer">
+					<tr style="width: 500px;text-align: center;" >
+						<td>${customer.id }</td>
+						<td>${customer.name }</td>
+						<td>${customer.gender }</td>
+						<td>${customer.cardid }</td>
+						<td>${customer.phoneNum }</td>
+						<td>${customer.qqNum }</td>
+						<td>${customer.address }</td>
+						<td><a href="customer/remove?id=${customer.id }" class="tablelink">删除</a></td>
 					</tr>
 				</c:forEach>
 
@@ -89,16 +93,17 @@
 
 		<div class="pagin">
 			<div class="message" style="font-size: 120%">
-				共<i class="blue">${size }</i>条记录，当前显示第&nbsp;<i class="blue">${page }&nbsp;</i>页,共 ${pageSum } 页
+				共<i class="blue">${size }</i>条记录，当前显示第&nbsp;<i class="blue">${page }&nbsp;</i>页,共
+				${pageNum } 页
 			</div>
 			<ul class="paginList">
-				<li class="paginItem"><a href="user/jump?page=0"><span
+				<li class="paginItem"><a href="customer/jump?page=0"><span
 						class="pagepre"></span></a></li>
-				<c:forEach var="n" begin="1" end="${pageSum }">
-					<li class="paginItem"><a href="user/jump?page=${n }">${n }</a></li>
+				<c:forEach var="n" begin="1" end="${pageNum }">
+					<li class="paginItem"><a href="customer/jump?page=${n }">${n }</a></li>
 				</c:forEach>
-				
-				<li class="paginItem"><a href="user/jump?page=00"><span
+
+				<li class="paginItem"><a href="customer/jump?page=00"><span
 						class="pagenxt"></span></a></li>
 			</ul>
 		</div>

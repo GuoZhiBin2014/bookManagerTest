@@ -49,12 +49,13 @@
 	<mvc:view-controller path="/sale_back" view-name="sale_back"/>
 	<mvc:view-controller path="/sale_statistics" view-name="sale_statistics"/>
 	<mvc:view-controller path="/user_info" view-name="user_info"/>
-	<mvc:view-controller path="/user_custom" view-name="user_custom"/>
+	<mvc:view-controller path="/user_customer" view-name="user_customer"/>
 	<mvc:view-controller path="/user_admin" view-name="user_admin"/>
 	<mvc:view-controller path="/user_update" view-name="user_update"/>
 	<mvc:view-controller path="/relogin" view-name="reLogin"/>
 	<mvc:view-controller path="/backlogin" view-name="backlogin"/>
 	<mvc:view-controller path="/book_category" view-name="book_category"/>
+	<mvc:view-controller path="/customer_add" view-name="customer_add"/>
 	
 	 
 </beans>
