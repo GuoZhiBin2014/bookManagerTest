@@ -86,7 +86,7 @@ $(function(){
     <dd><div class="title"><span><img src="images/leftico04.png" /></span>图书销售管理</div>
     <ul class="menuson">
         <li><cite></cite><a href="sale_in" target="rightFrame">销售订单录入</a><i></i></li>
-        <li><cite></cite><a href="sale_select" target="rightFrame">销售订单查询</a><i></i></li>
+        <li><cite></cite><a href="record/selectAll" target="rightFrame">销售订单查询</a><i></i></li>
         <li><cite></cite><a href="customer_add" target="rightFrame">客户信息录入</a><i></i></li>
         <li><cite></cite><a href="sale_back" target="rightFrame">销售退书录入</a><i></i></li>
         <li><cite></cite><a href="sale_statistics" target="rightFrame">销售信息统计</a><i></i></li>

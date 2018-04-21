@@ -1,28 +1,36 @@
 package com.briup.bean;
 
+/**
+ * 销售订单
+ */
 public class Record {
+	// 订单编号
 	private Long rid;
+	// 图书编号
 	private String bookId;
+	// 图书名字
 	private String bookName;
-	private String category;
+	// 出售价格
 	private String salePrice;
+	// 出售数量
 	private String saleNum;
-	// 利润
-	private String profit;
+	// 客户姓名
+	private Long customer;
+	// 添加时间
+	private String addTime;
 
 	public Record() {
 	}
 
-	public Record(Long rid, String bookId, String bookName, String category,
-			String salePrice, String saleNum, String profit) {
-		super();
+	public Record(Long rid, String bookId, String bookName, String salePrice,
+			String saleNum, Long customer, String addTime) {
 		this.rid = rid;
 		this.bookId = bookId;
 		this.bookName = bookName;
-		this.category = category;
 		this.salePrice = salePrice;
 		this.saleNum = saleNum;
-		this.profit = profit;
+		this.customer = customer;
+		this.addTime = addTime;
 	}
 
 	public Long getRid() {
@@ -49,14 +57,6 @@ public class Record {
 		this.bookName = bookName;
 	}
 
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
 	public String getSalePrice() {
 		return salePrice;
 	}
@@ -73,19 +73,27 @@ public class Record {
 		this.saleNum = saleNum;
 	}
 
-	public String getProfit() {
-		return profit;
+	public Long getCustomer() {
+		return customer;
 	}
 
-	public void setProfit(String profit) {
-		this.profit = profit;
+	public void setCustomer(Long customer) {
+		this.customer = customer;
+	}
+
+	public String getAddTime() {
+		return addTime;
+	}
+
+	public void setAddTime(String addTime) {
+		this.addTime = addTime;
 	}
 
 	@Override
 	public String toString() {
 		return "Record [rid=" + rid + ", bookId=" + bookId + ", bookName="
-				+ bookName + ", category=" + category + ", salePrice="
-				+ salePrice + ", saleNum=" + saleNum + ", profit=" + profit
+				+ bookName + ", salePrice=" + salePrice + ", saleNum="
+				+ saleNum + ", customer=" + customer + ", addTime=" + addTime
 				+ "]";
 	}
 

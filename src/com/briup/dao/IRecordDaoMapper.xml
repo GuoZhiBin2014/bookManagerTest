@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.dao.IRecordDao">
+
+	<insert id="addRecord" parameterType="Record">
+		<selectKey resultType="long" keyProperty="rid" order="BEFORE">
+			select record_seq.nextval from dual
+		</selectKey>
+		insert into t_record(rid,bookId,bookName,salePrice,saleNum,customer,addTime)
+		values(#{rid},#{bookId},#{bookName},#{salePrice},#{saleNum},#{customer},#{addTime})
+	</insert>
+	
+	<select id="selectAll" resultType="Record">
+        select * from t_record
+	</select>
+	
+	<delete id="removeById" parameterType="Long">
+		delete from t_record
+		where rid=#{rid}
+	</delete> 
+	
+	
+</mapper>

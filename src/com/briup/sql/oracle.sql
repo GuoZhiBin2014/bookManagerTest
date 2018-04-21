@@ -60,10 +60,10 @@ create table t_record(
 	rid number(20) primary key,
 	bookId varchar2(20) not null,
 	bookName varchar2(20) not null,
-	category varchar2(20) not null,
 	salePrice varchar2(20) not null,
 	saleNum varchar2(20) not null,
-	profit varchar2(20) not null
+	customer number(20) not null,
+	addTime varchar2(20) not null
 );
 
 insert into t_customer(id,name,gender,cardid,phoneNum,qqNum,address)
@@ -351,9 +351,11 @@ values(1406014025,'guozhibin25','111111','111111','111','111',0,23,'15234349950'
 drop sequence user_seq;
 drop sequence storage_seq;
 drop sequence customer_seq;
+drop sequence record_seq;
 
 create sequence user_seq start with 1406010001 increment by 1;
 create sequence storage_seq start with 9862000001 increment by 1;
 create sequence customer_seq start with 1101000001 increment by 1;
+create sequence record_seq start with 1201000001 increment by 1;
 
 commit;

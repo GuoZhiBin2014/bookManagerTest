@@ -13,6 +13,7 @@ public class Book implements Serializable {
 	private String author;
 	private String price;
 	private String info;
+	//库存量
 	private int inventory;
 
 	public Book() {
