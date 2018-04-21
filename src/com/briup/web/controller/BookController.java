@@ -15,11 +15,13 @@ import com.briup.bean.Book;
 import com.briup.bean.Category;
 import com.briup.bean.Storage;
 import com.briup.common.exception.BookServiceException;
+import com.briup.common.exception.CategoryServiceException;
 import com.briup.common.exception.DataAccessException;
 import com.briup.common.exception.StorageServiceException;
 import com.briup.common.util.PageUtils;
 import com.briup.dao.ICategoryDao;
 import com.briup.service.IBookService;
+import com.briup.service.ICategoryService;
 
 @Controller
 @RequestMapping("/book")
@@ -27,12 +29,11 @@ public class BookController {
 	@Autowired
 	private IBookService bookservice;
 	@Autowired
-	private ICategoryDao categoryService;
+	private ICategoryService categoryService;
 	
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String add(Book book, RedirectAttributes redirectAttributes) {
-		System.out.println(book);
 		try {
 			bookservice.addBooks(book);
 			redirectAttributes.addFlashAttribute("addMsg", "添加成功");
@@ -63,9 +64,14 @@ public class BookController {
 			session.setAttribute("books", all);
 			session.setAttribute("size", books.size());
 			
+			List<Category> list = categoryService.selectAll();
+			session.setAttribute("categorys", list);
+			
 		} catch (BookServiceException e) {
 			e.printStackTrace();
-		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		return "redirect:/book_select";
 	}
 
@@ -154,7 +160,7 @@ public class BookController {
 		try {
 			List<Category> selectAll = categoryService.selectAll();
 			session.setAttribute("categorys", selectAll);
-		} catch (DataAccessException e) {
+		} catch (CategoryServiceException e) {
 			e.printStackTrace();
 		}
 		
@@ -207,6 +213,74 @@ public class BookController {
 		} catch (BookServiceException e) {
 			e.printStackTrace();
 			rediAttributes.addFlashAttribute("error", "删除失败");
+		}
+		
+		return "redirect:/book_select";
+	}
+	
+	@RequestMapping(value="/modify",method = RequestMethod.GET)
+	public String modify(Long bookId, RedirectAttributes reAttributes){
+		
+		try {
+			Book book = bookservice.findBookById(bookId);
+			reAttributes.addFlashAttribute("book", book);
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+		}
+		
+		return "redirect:/book_update";
+	}
+	
+	@RequestMapping(value="selectByName")
+	public String selectByBookName(String bookName,HttpSession session){
+		System.out.println(bookName);
+		try {
+			session.setAttribute("page", 1);
+			List<Book> books = bookservice.selectByBookName(bookName);
+			int pageNum = PageUtils.getPage(books.size());
+			session.setAttribute("pageNum", PageUtils.getPage(books.size()));
+			List<Book> all = new ArrayList<>();
+			for (int i = 0; i < 10; i++) {
+				if (i < books.size()) {
+					all.add(books.get(i));
+				}
+			}
+			session.setAttribute("books", all);
+			session.setAttribute("size", books.size());
+			
+			List<Category> list = categoryService.selectAll();
+			session.setAttribute("categorys", list);
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return "redirect:/book_select";
+	}
+	
+	@RequestMapping(value="selectByCate")
+	public String selectByCate(String category, HttpSession session){
+		List<Book> books;
+		try {
+			books = bookservice.selectByCate(category);
+			int pageNum = PageUtils.getPage(books.size());
+			session.setAttribute("pageNum", PageUtils.getPage(books.size()));
+			List<Book> all = new ArrayList<>();
+			for (int i = 0; i < 10; i++) {
+				if (i < books.size()) {
+					all.add(books.get(i));
+				}
+			}
+			session.setAttribute("books", all);
+			session.setAttribute("size", books.size());
+			
+			List<Category> list = categoryService.selectAll();
+			session.setAttribute("categorys", list);
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+		} catch (CategoryServiceException e) {
+			e.printStackTrace();
 		}
 		
 		return "redirect:/book_select";

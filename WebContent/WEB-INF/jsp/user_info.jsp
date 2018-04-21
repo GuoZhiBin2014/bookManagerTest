@@ -96,10 +96,10 @@
 
 					<li><label>&nbsp;</label><input name="" type="submit"
 						class="loginbtn" value="更改"
-						 /> <input name="" type="button"
+						 /> <!-- <input name="" type="button"
 						class="loginbtn" value="清空" style="margin-left: 20px;"
 						onclick="javascript:window.location='main.html'"
-						 /></li>
+						 /> --></li>
 				</ul>
 				</form>
 			</div>

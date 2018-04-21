@@ -36,5 +36,17 @@
 		delete from t_book
 		where bookId=#{bookId}
 	</delete>
-
+	
+	<select id="selectByBookName" parameterType="String" resultType="Book">
+		select *
+		from t_book
+		where name=#{name}
+	</select>
+	
+	<select id="selectByCate" parameterType="String" resultType="Book">
+		select *
+		from t_book
+		where category=#{category}
+	</select>
+	
 </mapper>

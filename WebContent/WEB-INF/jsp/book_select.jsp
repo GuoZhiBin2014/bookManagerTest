@@ -54,24 +54,26 @@
 
 		<div style="margin-top: 10px;">
 			<ul class="seachform">
-
-				<li><label>综合查询</label><input name="" type="text"
+				<form action="book/selectByName" method="get">
+				<li><label>图书名称查询</label><input name="bookName" type="text"
 					class="scinput" /></li>
-
-
-				<li><label>综合查询</label><input name="" type="text"
-					class="scinput" /></li>
-
-				<li><label>综合查询</label><select class="select3"
+				<li><label>&nbsp;</label><input name="" type="submit"
+					class="scbtn" value="查询" /></li>
+				</form>
+				
+				<form action="book/selectByCate" method="get">
+				<li><label>图书类别查询</label><select class="select3" name="category"
 					style="margin-top: 6px; width: 70px;">
-						<option>类别</option>
-						<option>名著</option>
+						<c:forEach items="${categorys }" var="category">
+							<option>${category.name }</option>
+						</c:forEach>
 				</select></li>
 
-
-				<li><label>&nbsp;</label><input name="" type="button"
+				<li><label>&nbsp;</label><input name="" type="submit"
 					class="scbtn" value="查询" /></li>
-				<li><span
+				<li>
+				</form>
+				<span
 					style="color: red; margin-left: 30px; margin-top: 10px; font-size: 16px;">${error }</span>
 					<span
 					style="color: green; margin-left: 30px; margin-top: 10px; font-size: 16px;">${msg }</span>
@@ -122,7 +124,8 @@
 						<td>${book.author }</td>
 						<td>${book.price }</td>
 						<td>${book.inventory }</td>
-						<td><a>修改</a><a href="book/remove?bookId=${book.bookId }">删除</a></td>
+						<td><a href="book/modify?bookId=${book.bookId }">修改</a>
+						<a href="book/remove?bookId=${book.bookId }">删除</a></td>
 					</tr>
 
 				</c:forEach>

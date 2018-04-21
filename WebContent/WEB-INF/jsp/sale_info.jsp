@@ -53,8 +53,10 @@
 			<div class="itab">
 				<ul>
 					<li><a href="#tab1" class="selected">销售信息统计</a></li>
-				<span style="color: red;margin-left: 200px;float: left;font-size: 16px;margin-top: 5px;">${error}</span>
-    <span style="color: green;margin-left: 200px;float: left;font-size: 16px;margin-top: 5px;">${msg}</span>
+					<span
+						style="color: red; margin-left: 200px; float: left; font-size: 16px; margin-top: 5px;">${error}</span>
+					<span
+						style="color: green; margin-left: 200px; float: left; font-size: 16px; margin-top: 5px;">${msg}</span>
 					<!-- <li><a href="#tab2">自定义</a></li>  -->
 				</ul>
 			</div>
@@ -63,43 +65,60 @@
 
 				<!-- <div class="formtext">Hi，<b>admin</b>，欢迎您试用信息发布功能！</div> -->
 				<form action="storage/add">
-				<ul class="forminfo">
+					<ul class="forminfo">
 
-					<%-- <li><label>订单编号<b>*</b></label><input id="bookId" name="" 
-						type="text" class="dfinput" value="${storageId }" style="width: 200px;" /></li> --%>
-					<li id="bookName"><label>图书库存量:<b>*</b></label><span></span></li>
-					<li><label>图书入库订单数目：<b>*</b></label><span></span></li>
-					<li><label>图书预警数目数目：<b>*</b></label><span></span></li>
-					<li><label>销售订单数目：<b>*</b></label><span></span></li>
-					<li><label>销售图书数量总计：<b>*</b></label><span></span></li>
-					<li><label>客户数量总计<b>*</b></label><span></span></li>
-					<li><label>管理员数量统计<b>*</b></label><span></span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">图书总计数目:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${bookSize }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">图书库存总量:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${stockNum }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">图书入库订单数目:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${stockSize }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">图书入库数目:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${storageNum }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">图书预警数目:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${warnNum }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">销售订单数目:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${recordSize }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">销售图书数量总计:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${recordNum }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">客户数量总计:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${customerNum }</span></li>
+						<li><label
+							style="width: 150px; margin-left: 15px; font-size: 14px;">管理员数量统计:</label><span
+							style="font-weight: bold; font-size: 16px;margin-top: 3px;">${userSize }</span></li>
 
-					<li><label>&nbsp;</label><input type="submit"
-						class="btn" value="图书入库" /></li>
-				</ul>
+
+					</ul>
 				</form>
 			</div>
 
 
-    
-    
-    
-    </div>  
-       
-	</div> 
- 
-	<script type="text/javascript"> 
-      $("#usual1 ul").idTabs(); 
-    </script>
-    
-    <script type="text/javascript">
-	$('.tablelist tbody tr:odd').addClass('odd');
+
+
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		$("#usual1 ul").idTabs();
 	</script>
-    
-    
-    
-    
-    
+
+	<script type="text/javascript">
+		$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+
+
+
+
+
 </body>
 </html>

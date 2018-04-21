@@ -27,12 +27,12 @@ $(function(){
     </div>
         
     <ul class="nav">
-    <li><a href="index1.html" target="rightFrame" class="selected"><img src="images/icon01.png" title="工作台" /><h2>首页</h2></a></li>
-    <li><a href="book_select.html" target="rightFrame"><img src="images/icon02.png" title="模型管理" /><h2>图书管理</h2></a></li>
-    <li><a href="stock_select.html"  target="rightFrame"><img src="images/icon03.png" title="模块设计" /><h2>入库管理</h2></a></li>
-    <li><a href="sale_select.html"  target="rightFrame"><img src="images/icon04.png" title="常用工具" /><h2>销售管理</h2></a></li>
-    <li><a href="sale_statistics.html" target="rightFrame"><img src="images/icon05.png" title="文件管理" /><h2>信息统计</h2></a></li>
-    <li><a href="user_info.html"  target="rightFrame"><img src="images/icon06.png" title="系统设置" /><h2>个人资料</h2></a></li>
+    <li><a href="index" target="rightFrame" class="selected"><img src="images/icon01.png" title="首页" /><h2>首页</h2></a></li>
+    <li><a href="book/select" target="rightFrame"><img src="images/icon02.png" title="图书管理" /><h2>图书管理</h2></a></li>
+    <li><a href="storage/select"  target="rightFrame"><img src="images/icon03.png" title="入库管理" /><h2>入库管理</h2></a></li>
+    <li><a href="record/selectAll"  target="rightFrame"><img src="images/icon04.png" title="销售管理" /><h2>销售管理</h2></a></li>
+    <li><a href="customer/selectAll" target="rightFrame"><img src="images/icon05.png" title="客户管理" /><h2>客户管理</h2></a></li>
+    <li><a href="user_info"  target="rightFrame"><img src="images/icon06.png" title="个人资料" /><h2>个人资料</h2></a></li>
     </ul>
             
     <div class="topright">    

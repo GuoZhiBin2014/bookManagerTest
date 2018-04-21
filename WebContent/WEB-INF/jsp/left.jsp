@@ -61,8 +61,8 @@ $(function(){
     <ul class="menuson">
         <li><cite></cite><a href="customer_add" target="rightFrame">客户信息录入</a><i></i></li>
         <li><cite></cite><a href="customer/selectAll" target="rightFrame">客户信息管理</a><i></i></li>
-        <li><cite></cite><a href="record/selectAll" target="rightFrame">销售订单查询</a><i></i></li>
         <li><cite></cite><a href="sale_in" target="rightFrame">销售订单录入</a><i></i></li>
+        <li><cite></cite><a href="record/selectAll" target="rightFrame">销售订单查询</a><i></i></li>
         
     </ul>
     
@@ -72,7 +72,7 @@ $(function(){
         <li><cite></cite><a href="user_info" target="rightFrame">个人信息管理</a><i></i></li>
         <li><cite></cite><a href="user_update" target="rightFrame">个人密码修改</a><i></i></li>
         <li><cite></cite><a href="user/adminManage" target="rightFrame">管理员信息管理</a><i></i></li>
-        <li><cite></cite><a href="sale_info" target="rightFrame">相关信息统计</a><i></i></li>
+        <li><cite></cite><a href="system/info" target="rightFrame">相关信息统计</a><i></i></li>
         
     </ul>
 	

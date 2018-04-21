@@ -27,22 +27,23 @@ public class BookServiceImpl implements IBookService {
 	public void addBooks(Book book) throws BookServiceException {
 		try {
 			Book bookById = bookDao.findBookById(book.getBookId());
-			if(bookById!=null){
+			if (bookById != null) {
 				throw new BookServiceException("添加图书已存在");
 			}
-			Date date = new SimpleDateFormat("yyyy-MM-dd").parse(book.getbDate()); 
-			if(date.getTime()>new Date().getTime()||(date.getTime()<0)){
+			Date date = new SimpleDateFormat("yyyy-MM-dd").parse(book
+					.getbDate());
+			if (date.getTime() > new Date().getTime() || (date.getTime() < 0)) {
 				throw new BookServiceException("出版日期填写有误");
 			}
 			book.setInventory(0);
 			bookDao.addBook(book);
-		}  catch (NullPointerException e) {
+		} catch (NullPointerException e) {
 			e.printStackTrace();
 			throw new BookServiceException("填写信息不全,请补充");
-		}  catch (ParseException e) {
+		} catch (ParseException e) {
 			e.printStackTrace();
 			throw new BookServiceException("出版日期填写有误");
-		}  catch (DataAccessException e) {
+		} catch (DataAccessException e) {
 			e.printStackTrace();
 			throw new BookServiceException("数据库访问异常");
 		}
@@ -58,8 +59,7 @@ public class BookServiceImpl implements IBookService {
 			throw new BookServiceException("数据访问异常");
 		}
 		return books;
-		
-		
+
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class BookServiceImpl implements IBookService {
 			e.printStackTrace();
 			throw new BookServiceException("所填信息有误");
 		}
-		
+
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class BookServiceImpl implements IBookService {
 			e.printStackTrace();
 		}
 		return warnList;
-		
+
 	}
 
 	@Override
@@ -105,13 +105,43 @@ public class BookServiceImpl implements IBookService {
 		System.out.println(bookId);
 		try {
 			Boolean isDelete = bookDao.deleteByBookId(bookId);
-			if(!isDelete){
+			if (!isDelete) {
 				throw new BookServiceException("删除失败");
 			}
 		} catch (DataAccessException e) {
 			e.printStackTrace();
 		}
+
+	}
+
+	@Override
+	public List<Book> selectByBookName(String bookName)
+			throws BookServiceException {
+		List<Book> list = null;
+		try {
+			if (bookName.equals("")) {
+				list = bookDao.findAllBooks();
+			} else {
+				list = bookDao.selectByBookName(bookName);
+			}
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	@Override
+	public List<Book> selectByCate(String category) throws BookServiceException {
+		List<Book> list = null;
+		try {
+			list = bookDao.selectByCate(category);
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+		}
 		
+		
+		return list;
 	}
 
 }

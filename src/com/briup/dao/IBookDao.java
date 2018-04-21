@@ -18,5 +18,9 @@ public interface IBookDao {
 	
 	public Boolean deleteByBookId(Long bookId) throws DataAccessException;
 	
+	public List<Book> selectByBookName(String bookName) throws DataAccessException;
+	
+	public List<Book> selectByCate(String category) throws DataAccessException;
+	
 	
 }

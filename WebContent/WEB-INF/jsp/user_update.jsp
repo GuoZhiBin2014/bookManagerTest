@@ -82,10 +82,10 @@
 						<font style="margin-left: 10px;" color=#ff0000>请再输入一次密码</font></li>
 					<li><label>&nbsp;</label><input name="" type="submit"
 						class="loginbtn" value="更改"
-						style="margin-top: 20px;" /> <input name="" type="button"
+						style="margin-top: 20px;" /> <!-- <input name="" type="button"
 						class="loginbtn" value="清空"
 						onclick="javascript:window.location='main.html'"
-						style="margin-left: 50px;" /></li>
+						style="margin-left: 50px;" /> --></li>
 				</ul>
 				</form>
 			</div>

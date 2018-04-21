@@ -105,7 +105,7 @@ tfoot tr td {
 </head>
 
 <body
-	style="background-color: #1c77ac; background-image: url(images/light.png); background-repeat: no-repeat; background-position: center top; overflow: hidden;">
+	style="margin-top:-50px;background-color: #1c77ac; background-image: url(images/light.png); background-repeat: no-repeat; background-position: center top; overflow: hidden;">
 
 
 
@@ -178,8 +178,8 @@ tfoot tr td {
 
 
 					<li><label>&nbsp;</label><input name="" type="submit"
-						class="loginbtn" value="注册" style="margin-top: 20px;" /> <input
-						name="" type="button" class="loginbtn" value="清空" onclick=""
+						class="loginbtn" value="注册" style="margin-top: 5px;" /> <input
+						name="" type="reset" class="loginbtn" value="清空" onclick=""
 						style="margin-left: 50px;" /></li>
 				</ul>
 			</form>

@@ -18,4 +18,9 @@ public interface IBookService {
 	
 	public void remove(Long bookId) throws BookServiceException;
 	
+	public List<Book> selectByBookName(String bookName) throws BookServiceException;
+	
+	public List<Book> selectByCate(String category) throws BookServiceException;
+	
+	
 }
