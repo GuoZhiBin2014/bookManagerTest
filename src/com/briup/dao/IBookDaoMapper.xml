@@ -26,5 +26,15 @@
 			bDate=#{bDate},author=#{author},price=#{price},info=#{info},inventory=#{inventory}
 		where bookId = #{bookId} 
 	</update>
+	
+	<select id="selectWarn" resultType="Book">
+		select * from t_book
+		where t_book.inventory&lt;20
+	</select>
+	
+	<delete id="deleteByBookId" parameterType="Long">
+		delete from t_book
+		where bookId=#{bookId}
+	</delete>
 
 </mapper>

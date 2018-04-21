@@ -84,13 +84,13 @@
 
 					
 					<li><label>图书出版社<b>*</b></label><input name="press" type="text"
-						class="dfinput" value="${book.press }" style="width: 518px;" /></li>
+						class="dfinput" value="${book.press }" style="width: 300px;" /></li>
 					<li><label>出版日期<b>*</b></label><input name="bDate" type="date"
-						class="dfinput" value="${book.bDate }" style="width: 518px;" /></li>
+						class="dfinput" value="${book.bDate }" style="width: 300px;" /></li>
 					<li><label>图书作者<b>*</b></label><input name="author" type="text"
-						class="dfinput" value="${book.author }" style="width: 518px;" /></li>
+						class="dfinput" value="${book.author }" style="width: 300px;" /></li>
 					<li><label>图书定价<b>*</b></label><input name="price" type="text"
-						class="dfinput" value="${book.price }" style="width: 518px;" /></li>
+						class="dfinput" value="${book.price }" style="width: 300px;" /></li>
 
 					
     				
@@ -99,7 +99,7 @@
    
 					<li><label>详细介绍<b>*</b></label> <!--     <textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
  --> <textarea name="info" class="dfinput" 
-							style="width: 518px; height: 100px; line-height: 18px;">${book.info }</textarea>
+							style="width: 480px; height: 70px; line-height: 18px;">${book.info }</textarea>
 
 					</li>
 					<li><label>&nbsp;</label><input name="" type="submit"

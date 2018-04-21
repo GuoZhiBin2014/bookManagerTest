@@ -14,5 +14,9 @@ public interface IBookDao {
 	
 	public void updateBook(Book book) throws DataAccessException;
 	
+	public List<Book> selectWarn() throws DataAccessException;
+	
+	public Boolean deleteByBookId(Long bookId) throws DataAccessException;
+	
 	
 }

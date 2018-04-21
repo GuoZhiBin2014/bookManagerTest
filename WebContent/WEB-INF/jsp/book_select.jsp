@@ -72,6 +72,11 @@
 				<li><label>&nbsp;</label><input name="" type="button"
 					class="scbtn" value="查询" /></li>
 				<li><span
+					style="color: red; margin-left: 30px; margin-top: 10px; font-size: 16px;">${error }</span>
+					<span
+					style="color: green; margin-left: 30px; margin-top: 10px; font-size: 16px;">${msg }</span>
+				</li>
+				<li><span
 					style="color: green; font-size: 16px; margin-left: 80px; margin-top: 5px;">${book_add }</span></li>
 			</ul>
 		</div>
@@ -117,7 +122,7 @@
 						<td>${book.author }</td>
 						<td>${book.price }</td>
 						<td>${book.inventory }</td>
-						<td><a>修改</a><a>删除</a></td>
+						<td><a>修改</a><a href="book/remove?bookId=${book.bookId }">删除</a></td>
 					</tr>
 
 				</c:forEach>
@@ -138,7 +143,7 @@
 		<div class="pagin">
 			<div class="message" style="font-size: 120%">
 				共<i class="blue">${size }</i>条记录，当前显示第&nbsp; <i class="blue">${page }&nbsp;</i>页,
-				共<i class="blue"> ${pageNum } </i>页 
+				共<i class="blue"> ${pageNum } </i>页
 			</div>
 			<ul class="paginList">
 				<li class="paginItem"><a href="book/jump?page=0"><span

@@ -63,7 +63,14 @@
         </ul>
     
     </div> -->
-
+		
+		<div class="itab" style="margin-top: -20px;margin-left: 10px;">
+				<ul>
+					<li><a href="#tab1" class="selected" >销售信息管理</a></li>
+					<span style="color: red;margin-left: 400px;margin-top: 30px;font-size: 16px;">${error }</span>
+					<span style="color: green;margin-left: 400px;margin-top: 30px;font-size: 16px;">${msg }</span>
+				</ul>
+			</div>
 
 		<table class="tablelist">
 			<thead>

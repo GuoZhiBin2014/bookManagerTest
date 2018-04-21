@@ -160,5 +160,56 @@ public class BookController {
 		
 		return "redirect:/book_add";
 	}
+	
+	@RequestMapping(value="/warn")
+	public String selectWarning(HttpSession session){
+		List<Book> list;
+		try {
+			list = bookservice.selectWarn();
+			session.setAttribute("page", 1);
+			List<Book> books = bookservice.selectWarn();
+			int pageNum = PageUtils.getPage(books.size());
+			session.setAttribute("pageNum", PageUtils.getPage(books.size()));
+			List<Book> all = new ArrayList<>();
+			for (int i = 0; i < 10; i++) {
+				if (i < books.size()) {
+					all.add(books.get(i));
+				}
+			}
+			session.setAttribute("books", all);
+			session.setAttribute("size", books.size());
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return "redirect:/book_select";
+	}
+	
+	@RequestMapping(value="/remove", method = RequestMethod.GET)
+	public String remove(String bookId, HttpSession session, RedirectAttributes rediAttributes){
+		System.out.println(bookId);
+		try {
+			bookservice.remove(Long.valueOf(bookId));
+			session.setAttribute("page", 1);
+			List<Book> books = bookservice.findAllBooks();
+			int pageNum = PageUtils.getPage(books.size());
+			session.setAttribute("pageNum", PageUtils.getPage(books.size()));
+			List<Book> all = new ArrayList<>();
+			for (int i = 0; i < 10; i++) {
+				if (i < books.size()) {
+					all.add(books.get(i));
+				}
+			}
+			session.setAttribute("books", all);
+			session.setAttribute("size", books.size());
+			rediAttributes.addFlashAttribute("msg", "删除成功");
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+			rediAttributes.addFlashAttribute("error", "删除失败");
+		}
+		
+		return "redirect:/book_select";
+	}
 
 }

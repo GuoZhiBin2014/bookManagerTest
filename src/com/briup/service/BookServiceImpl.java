@@ -76,7 +76,6 @@ public class BookServiceImpl implements IBookService {
 
 	@Override
 	public void updateBook(Book book) throws BookServiceException {
-		System.out.println(book);
 		try {
 			bookDao.updateBook(book);
 		} catch (DataAccessException e) {
@@ -85,6 +84,32 @@ public class BookServiceImpl implements IBookService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new BookServiceException("所填信息有误");
+		}
+		
+	}
+
+	@Override
+	public List<Book> selectWarn() throws BookServiceException {
+		List<Book> warnList = null;
+		try {
+			warnList = bookDao.selectWarn();
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+		}
+		return warnList;
+		
+	}
+
+	@Override
+	public void remove(Long bookId) throws BookServiceException {
+		System.out.println(bookId);
+		try {
+			Boolean isDelete = bookDao.deleteByBookId(bookId);
+			if(!isDelete){
+				throw new BookServiceException("删除失败");
+			}
+		} catch (DataAccessException e) {
+			e.printStackTrace();
 		}
 		
 	}

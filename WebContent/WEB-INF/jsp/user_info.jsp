@@ -60,7 +60,7 @@
 
 			<div id="tab1" class="tabson">
 				<form action="user/update" method="post">
-				<ul class="forminfo" style="margin-top: 35px;">
+				<ul class="forminfo" style="margin-top: 5px;">
 
 					<li><label>用户姓名<b>*</b></label><input id="nickname" name="nickname" disabled="disabled"
 						type="text" class="dfinput" value="${user.nickname }" style="width: 220px;" /> <font
@@ -96,10 +96,10 @@
 
 					<li><label>&nbsp;</label><input name="" type="submit"
 						class="loginbtn" value="更改"
-						style="margin-top: 20px;" /> <input name="" type="button"
-						class="loginbtn" value="清空"
+						 /> <input name="" type="button"
+						class="loginbtn" value="清空" style="margin-left: 20px;"
 						onclick="javascript:window.location='main.html'"
-						style="margin-left: 50px;" /></li>
+						 /></li>
 				</ul>
 				</form>
 			</div>

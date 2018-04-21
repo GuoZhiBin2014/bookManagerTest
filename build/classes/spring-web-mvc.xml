@@ -56,6 +56,8 @@
 	<mvc:view-controller path="/backlogin" view-name="backlogin"/>
 	<mvc:view-controller path="/book_category" view-name="book_category"/>
 	<mvc:view-controller path="/customer_add" view-name="customer_add"/>
+	<mvc:view-controller path="/stock_warn" view-name="stock_warn"/>
+	<mvc:view-controller path="/sale_info" view-name="sale_info"/>
 	
 	 
 </beans>

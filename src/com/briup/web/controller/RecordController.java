@@ -113,7 +113,7 @@ public class RecordController {
 	}
 
 	@RequestMapping(value="/remove",method = RequestMethod.GET)
-	public String remove(Long rid, HttpSession session){
+	public String remove(Long rid, HttpSession session, RedirectAttributes redirectAttributes ){
 		
 		try {
 			recordService.remove(rid);
@@ -129,8 +129,10 @@ public class RecordController {
 			}
 			session.setAttribute("records", all);
 			session.setAttribute("size", records.size());
+			redirectAttributes.addFlashAttribute("msg", "删除成功");
 		} catch (RecordServiceException e) {
 			e.printStackTrace();
+			redirectAttributes.addFlashAttribute("error", "删除失败："+e.getMessage());
 		}
 		
 		return "redirect:/sale_select";

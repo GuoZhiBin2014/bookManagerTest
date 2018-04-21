@@ -14,4 +14,8 @@ public interface IBookService {
 	
 	public void updateBook(Book book) throws BookServiceException;
 	
+	public List<Book> selectWarn() throws BookServiceException;
+	
+	public void remove(Long bookId) throws BookServiceException;
+	
 }
