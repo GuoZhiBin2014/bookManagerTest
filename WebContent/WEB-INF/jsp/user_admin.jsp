@@ -65,7 +65,6 @@
 					<th style="width: 150px;">电子邮箱</th>
 					<th style="width: 100px;">年龄</th>
 					<th style="width: 100px;">联系电话</th>
-					<th style="width: 100px;">相关操作</th>
 				</tr>
 			</thead>
 
@@ -78,7 +77,6 @@
 						<td>${admin.email }</td>
 						<td>${admin.age }</td>
 						<td>${admin.phone }</td>
-						<td><a href="#" class="tablelink">查看详情</a></td>
 					</tr>
 				</c:forEach>
 

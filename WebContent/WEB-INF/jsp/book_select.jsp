@@ -85,9 +85,7 @@
 
 		<div class="tools" style="float: right; margin-top: -45px;">
 
-			<ul class="toolbar">
-				<li class="click"><span><img src="images/t01.png" /></span>添加</li>
-			</ul>
+			
 
 
 

@@ -897,7 +897,7 @@ h2 {
 .dflist1 {
 	border: #d3dbde solid 1px;
 	width: 288px;
-	height: 255px;
+	height: 285px;
 	float: right;
 	margin-top: 235px;
 	margin-right: -290px;
@@ -936,7 +936,7 @@ h2 {
 }
 
 .newlist i {
-	width: 80px;
+	width: 220px;
 	display: block;
 	float: left;
 	font-style: normal;

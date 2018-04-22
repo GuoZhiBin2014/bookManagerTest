@@ -1,8 +1,10 @@
 package com.briup.web.controller;
 
+import java.net.HttpCookie;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.xml.ws.Response;
@@ -55,7 +57,8 @@ public class UserController {
 		try {
 			User user = userService.login(nickName, password);
 			session.setAttribute("user", user);
-			return "redirect:/main";
+			
+			return "redirect:/system/mainPage";
 		} catch (UserServiceException e) {
 			e.printStackTrace();
 			redirectAttributes

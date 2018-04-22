@@ -76,7 +76,6 @@
 					<th>入库单价</th>
 					
 					<th>操作员姓名</th>
-					<th>相关操作</th>
 				</tr>
 			</thead>
 
@@ -91,8 +90,6 @@
 						<td>${sto.stime }</td>
 						<td>${sto.price }</td>
 						<td>${sto.operator }</td>
-						<td><a href="#" class="tablelink">查看图书详情</a> 
-						<a href="#" class="tablelink"> 删除</a></td>
 					</tr>
 				</c:forEach>
 

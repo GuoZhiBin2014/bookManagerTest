@@ -62,8 +62,7 @@
 					onclick="JavaScript:this.value=''" /></li>
 
 				<li><input type="submit" class="loginbtn" value="登录" 
-					onclick="javascript:window.location='main.html'" /> <label><input
-						name="" type="checkbox" value="" checked="checked" />记住密码</label> <label><a
+					onclick="javascript:window.location='main.html'" />  <label><a
 						href="#">忘记密码</a></label></li>
 
 

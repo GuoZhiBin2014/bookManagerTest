@@ -68,8 +68,7 @@
 		</div>
 
 		<div class="welinfo">
-			<span><img src="images/time.png" alt="时间" /></span> <i>您上次登录的时间：2013-10-09
-				15:22</i>（不是您登录的？<a href="#">请点这里</a>）
+			
 		</div>
 		<div class="xline" id="line2"></div>
 	</div>
@@ -123,7 +122,7 @@
 	
 	
 
-	<div class="dflist" id="info">
+	<!-- <div class="dflist" id="info">
 		<div class="listtitle">
 			<a href="#" class="more1">更多</a>最新信息
 		</div>
@@ -133,32 +132,33 @@
 			<li><a href="#">最高法:谎称炸弹致航班备降者从重追刑责</a></li>
 			<li><a href="#">华北大部遭遇雾霾天 北京全城陷重污染</a></li>
 		</ul>
-	</div>
+	</div> -->
+	
+	
 
-
-	<div class="dflist1">
-		<div class="listtitle">
+	<div class="dflist1" style="float: right;margin-right: 10px;margin-top: -120px;">
+		<div class="listtitle" >
 			<a href="#" class="more1">更多</a>销量排行榜
 		</div>
 		<ul class="newlist">
-			<li><i>会员数：</a></i>2535462</li>
-			<li><i>文档数：</a></i>5546</li>
-			<li><i>普通文章：</a></i>2315</li>
-			<li><i>软件：</a></i>1585</li>
-			<li><i>评论数：</a></i>5342</li>
-			<li><i>评论数：</a></i>5342</li>
-			<li><i>评论数：</a></i>5342</li>
-			<li><i>评论数：</a></i>5342</li>
+			<li><i>图书总计数目: </a></i>${bookSize }</li>
+			<li><i>图书库存总量:</a></i>${stockNum }</li>
+			<li><i>图书入库订单数目:</a></i>${stockSize }</li>
+			<li><i>图书入库数目:</a></i>${storageNum }</li>
+			<li><i>图书预警数目:</a></i>${warnNum }</li>
+			<li><i>销售订单数目:</a></i>${recordSize }</li>
+			<li><i>销售图书数量总计:</a></i>${recordNum }</li>
+			<li><i>客户数量总计:</a></i>${customerNum }</li>
+			<li><i>管理员数量统计:</a></i>${userSize }</li>
 		</ul>
 	</div>
 	
-	<div class="dflist1" id="Statistic">
-    <div class="listtitle"><a href="#" class="more1">更多</a>信息统计</div>    
+	<div class="dflist1" id="Statistic" style="margin-top: 180px;">
+    <div class="listtitle"><a href="#" class="more1">更多</a>软件信息</div>    
     <ul class="newlist">
-    <li><i>会员数：</a></i>2535462</li>
-    <li><i>文档数：</a></i>5546</li>
-    <li><i>普通文章：</a></i>2315</li>
-    <li><i>软件：</a></i>1585</li>
+    <li><i>基于Java的图书销售管理系统</a>
+    <li><i>学号：1406014318</a>
+    <li><i>姓名：郭志斌</a>
     </ul>        
     </div>
 
@@ -179,78 +179,12 @@
 	<div class="xline" id="line1"></div>
 
 
-	<!-- <ul class="iconlist">
-
-		<li><img src="images/ico01.png" />
-		<p>
-				<a href="#">管理设置</a>
-			</p></li>
-		<li><img src="images/ico02.png" />
-		<p>
-				<a href="#">发布文章</a>
-			</p></li>
-		<li><img src="images/ico03.png" />
-		<p>
-				<a href="#">数据统计</a>
-			</p></li>
-		<li><img src="images/ico04.png" />
-		<p>
-				<a href="#">文件上传</a>
-			</p></li>
-		<li><img src="images/ico05.png" />
-		<p>
-				<a href="#">目录管理</a>
-			</p></li>
-		<li><img src="images/ico06.png" />
-		<p>
-				<a href="#">查询</a>
-			</p></li>
-
-	</ul> -->
 	
 	
-	<div class="leftinfo" id="maintjId">
-    <div class="listtitle"><a href="#" class="more1">更多</a>数据统计</div>
+	
+   
     
-    <div class="maintj" >  
-    <table id='myTable5'>
-				<caption>uimaker.com players count</caption>
-				<thead>
-					<tr>
-						<th></th>
-						<th>Jan</th>
-						<th>Feb</th>
-						<th>Mar</th>
-						<th>Apr</th>
-						<th>May</th>
-						<th>Jun</th>
-						<th>Jul</th>
-						<th>Aug</th>
-						<th>Sep</th>
-						<th>Oct</th>
-						<th>Nov</th>
-						<th>Dec</th>
-					</tr>
-				</thead>
-					<tbody>
-					<tr>
-						<th>2010</th>
-						<td>125</td>
-						<td>185</td>
-						<td>327</td>
-						<td>359</td>
-						<td>376</td>
-						<td>398</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-					</tr>
-				</tbody>
-			</table>  
-    </div>
+    
 
 </body>
 </html>

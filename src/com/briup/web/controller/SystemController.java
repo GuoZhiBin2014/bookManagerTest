@@ -103,5 +103,66 @@ public class SystemController {
 		
 		return "redirect:/sale_info";
 	}
+	
+	@RequestMapping(value="mainPage")
+	public String main(HttpSession session){
+		
+		try {
+			List<Book> books = bookService.findAllBooks();
+			session.setAttribute("bookSize", books.size());
+			int stockNum = 0;
+			for (Book book : books) {
+				stockNum += book.getInventory();
+			}
+			session.setAttribute("stockNum", stockNum);
+			List<Book> list = bookService.selectWarn();
+			session.setAttribute("warnNum", list.size());
 
+		} catch (BookServiceException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			List<Storage> list = storageService.selectAll();
+			session.setAttribute("stockSize", list.size());
+			int storageNum = 0;
+			for(Storage storage: list){
+				storageNum+=storage.getSnumber();
+			}
+			session.setAttribute("storageNum", storageNum);
+		} catch (StorageServiceException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			List<Record> list = recordService.selectAll();
+			session.setAttribute("recordSize", list.size());
+			int recordNum = 0;
+			for(Record record:list){
+				recordNum+=Integer.valueOf(record.getSaleNum());
+			}
+			session.setAttribute("recordNum", recordNum);
+		} catch (RecordServiceException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			List<User> list = userService.selectAllAdmin();
+			session.setAttribute("userSize", list.size());
+		} catch (UserServiceException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			List<Customer> list = customerService.selectAll();
+			session.setAttribute("customerNum", list.size());
+		} catch (CustomerServiceException e) {
+			e.printStackTrace();
+		}
+		
+		return"redirect:/main";
+	}
+	
+	
+	
 }
