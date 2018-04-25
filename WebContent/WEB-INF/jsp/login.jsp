@@ -61,9 +61,9 @@
 				<li><input name="password" type="password" class="loginpwd" value="123456"
 					onclick="JavaScript:this.value=''" /></li>
 
-				<li><input type="submit" class="loginbtn" value="登录" 
-					onclick="javascript:window.location='main.html'" />  <label><a
-						href="#">忘记密码</a></label></li>
+				<li><input type="submit" class="loginbtn" value="登 录" style="margin-left: 110px;"
+					onclick="javascript:window.location='main.html'" /> 
+					 </li>
 
 
 

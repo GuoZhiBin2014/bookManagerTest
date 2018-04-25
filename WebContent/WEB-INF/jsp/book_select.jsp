@@ -102,7 +102,7 @@
 					<th width="80px">图书类型</th>
 					<th width="150px">图书出版社</th>
 					<th width="80px">出版日期</th>
-					<th width="70px">图书作者</th>
+					<th width="120px">图书作者</th>
 					<th width="70px">图书定价</th>
 					<th width="70px">库存量</th>
 					<th width="80px">操作</th>

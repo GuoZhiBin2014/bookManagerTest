@@ -76,7 +76,7 @@
 						<li><label>身份证号<b>*</b></label><input name="cardid"
 							type="text" class="dfinput" value="" style="width: 250px;" /></li>
 						<li><label>联系电话<b>*</b></label><input name="phoneNum"
-							type="text" class="dfinput" value="${currentTime }"
+							type="text" class="dfinput" value=""
 							style="width: 250px;" /></li>
 						<li><label>QQ号<b>*</b></label><input name="qqNum" type="text"
 							class="dfinput" value="" style="width: 250px;" /></li>

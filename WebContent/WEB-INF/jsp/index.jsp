@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,36 +19,7 @@
 <script type="text/javascript" src="js/jquery.gvChart-1.0.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.ba-resize.min.js"></script>
 
-
-<!-- <link rel="stylesheet" type="text/css" id="css" href="register/style/main.css" /> 
-<link rel="stylesheet" type="text/css" id="css" href="register/style/style1.css" />
-<link rel="stylesheet" type="text/css" id="css" href="register/style/style.css" /> 
-<script src="register/js/main.js" type="text/javascript"></script> -->
-
-
-<script type="text/javascript">
-	gvChartInit();
-	jQuery(document).ready(function() {
-
-		jQuery('#myTable5').gvChart({
-			chartType : 'PieChart',
-			gvSettings : {
-				vAxis : {
-					title : 'No of players'
-				},
-				hAxis : {
-					title : 'Month'
-				},
-				width : 650,
-				height : 200
-			}
-		});
-	});
-</script>
 </head>
-
-
-
 
 <body>
 
@@ -63,26 +34,24 @@
 
 
 		<div class="welinfo">
-			<span><img src="images/sun.png" alt="天气" /></span> <b>${user.nickname }，早上好，欢迎使用信息管理系统</b>(${user.email })
-			<a href="#">帐号设置</a>
+			<span><img src="images/sun.png" alt="天气" /></span> <b>${user.nickname }，您好，欢迎使用图书销售管理系统</b>(${user.email })
+			<a href="user_info">帐号设置</a>
 		</div>
 
-		<div class="welinfo">
-			
-		</div>
+		<div class="welinfo"></div>
 		<div class="xline" id="line2"></div>
 	</div>
 
 
 
-	 <div id="left">
+	<div id="left">
 
 		<div id="tabs0">
 			<ul class="menu0" id="menu0">
-				<li onmouseover="setTab(0)" class="lisovers">社区新闻1</li>
-				<li onmouseover="setTab(1)">社区新闻2</li>
-				<li onmouseover="setTab(2)">社区新闻3</li>
-				<li onmouseover="setTab(3)">社区新闻4</li>
+				<li onmouseover="setTab(0)" class="lisovers">资讯新闻</li>
+				<li onmouseover="setTab(1)">资讯新闻</li>
+				<li onmouseover="setTab(2)">资讯新闻</li>
+				<li onmouseover="setTab(3)">资讯新闻</li>
 			</ul>
 			<div class="main0" id="main0">
 				<div class="block">
@@ -118,26 +87,12 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-	</div> 
-	
-	
+	</div>
 
-	<!-- <div class="dflist" id="info">
+
+	<div class="dflist1"
+		style="float: right; margin-right: 10px; margin-top: -120px;">
 		<div class="listtitle">
-			<a href="#" class="more1">更多</a>最新信息
-		</div>
-		<ul class="newlist">
-			<li><a href="#">上海自贸区今日正式挂牌成立</a></li>
-			<li><a href="#">习近平将访东南亚两国 首次出席APEC峰会</a></li>
-			<li><a href="#">最高法:谎称炸弹致航班备降者从重追刑责</a></li>
-			<li><a href="#">华北大部遭遇雾霾天 北京全城陷重污染</a></li>
-		</ul>
-	</div> -->
-	
-	
-
-	<div class="dflist1" style="float: right;margin-right: 10px;margin-top: -120px;">
-		<div class="listtitle" >
 			<a href="#" class="more1">更多</a>销量排行榜
 		</div>
 		<ul class="newlist">
@@ -152,39 +107,34 @@
 			<li><i>管理员数量统计:</a></i>${userSize }</li>
 		</ul>
 	</div>
-	
+
 	<div class="dflist1" id="Statistic" style="margin-top: 180px;">
-    <div class="listtitle"><a href="#" class="more1">更多</a>软件信息</div>    
-    <ul class="newlist">
-    <li><i>基于Java的图书销售管理系统</a>
-    <li><i>学号：1406014318</a>
-    <li><i>姓名：郭志斌</a>
-    </ul>        
-    </div>
+		<div class="listtitle">
+			<a href="#" class="more1">更多</a>软件信息
+		</div>
+		<ul class="newlist">
+			<li><i>基于Java的图书销售管理系统</a>
+					<li><i>学号：1406014318</a>
+							<li><i>姓名：郭志斌</a>
+		</ul>
+	</div>
 
 
 
 	<div class="welinfo" id="zhinan">
-		<span><img src="images/dp.png" alt="提醒" /></span> <b>Uimaker信息管理系统使用指南</b>
+		<span><img src="images/dp.png" alt="提醒" /></span> <b>图书销售管理系统使用指南</b>
 	</div>
 
 	<ul class="infolist" id="infol">
-		<li><span>快速进行文章发布操作</span><a class="ibtn">发布或管理文章</a></li>
-		<li><span>快速发布产品</span><a class="ibtn">发布或管理产品</a></li>
-		<li><span>进行密码修改、账户设置等操作</span><a class="ibtn">账户管理</a></li>
-		<li><span>进行密码修改、账户设置等操作</span><a class="ibtn">账户管理</a></li>
-		<li><span>进行密码修改、账户设置等操作</span><a class="ibtn">账户管理</a></li>
+		<li><span>图书基本信息管理</span><a class="ibtn" href="book/select">图书详情查询</a></li>
+		<li><span>图书类别管理</span><a class="ibtn" href="category/show">图书类别添加</a></li>
+		<li><span>进行入库操作，添加入库订单</span><a class="ibtn" href="storage/select">入库订单</a></li>
+		<li><span>进行销售信息、客户信息录入等操作</span><a class="ibtn" href="sale_in">销售信息录入</a></li>
+		<li><span>进行个人信息管理</span><a class="ibtn" href="user_info">信息管理</a></li>
 	</ul>
 
 	<div class="xline" id="line1"></div>
 
-
-	
-	
-	
-   
-    
-    
 
 </body>
 </html>

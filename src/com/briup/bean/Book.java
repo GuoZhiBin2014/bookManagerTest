@@ -8,6 +8,7 @@ public class Book implements Serializable {
 	private Long bookId;
 	private String name;
 	private String category;
+	//出版社
 	private String press;
 	private String bDate;
 	private String author;
@@ -18,7 +19,6 @@ public class Book implements Serializable {
 
 	public Book() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Book(Long bookId, String name, String category, String press,
