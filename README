@@ -1,0 +1,13 @@
+Design and implementation of book sales management system based on Java
+
+运行环境
+1.操作系统：Windows10
+2.编程平台：Eclipse Luna Service Release 2 (4.4.2)
+3.使用语言：java  (JDK 1.8)
+4.Web服务器：tomcat 8.0
+5.数据库：Oracle	 数据库可视化：PLSQL Developer
+6.测试浏览器：火狐浏览器（59.0.2），谷歌浏览器（65.0.3325.181）
+
+运行配置更改
+1.注意修改src中db.properties的数据库配置信息,保持和自己的一致
+2.建表语句在src中com.briup.sql包里面
